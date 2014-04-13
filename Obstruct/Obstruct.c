@@ -112,11 +112,15 @@ static const char *obstr_scan_offset(const char *signature) {
 
 
 static const char *obstr_scan_return_type(const char *signature) {
-	return obstr_scan_offset(obstr_scan_object_type(signature));
+	signature = obstr_scan_object_type(signature);
+	signature = obstr_scan_offset(signature);
+	return signature;
 }
 
 static const char *obstr_scan_receiver_type(const char *signature) {
-	return obstr_scan_unknown_type(obstr_scan_object_type(signature));
+	signature = obstr_scan_object_type(signature);
+	signature = obstr_scan_unknown_type(signature);
+	return signature;
 }
 
 
