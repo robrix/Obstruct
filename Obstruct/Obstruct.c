@@ -121,6 +121,8 @@ static const char *obstr_scan_receiver_type(const char *signature) {
 static int32_t obstr_signature_get_arity(const char *signature) {
 	int32_t arity = 0;
 	
+	signature = obstr_scan_return_type(signature);
+	signature = obstr_scan_receiver_type(signature);
 	
 	// skip return type
 	// skip ? for block type
