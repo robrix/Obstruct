@@ -396,7 +396,6 @@
 		D42ED3F018FA198D005BEC10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Obstruct.framework/Versions/A/Obstruct";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -410,7 +409,6 @@
 				);
 				INFOPLIST_FILE = "ObstructTests/ObstructTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -418,7 +416,6 @@
 		D42ED3F118FA198D005BEC10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Obstruct.framework/Versions/A/Obstruct";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -428,7 +425,6 @@
 				GCC_PREFIX_HEADER = "Obstruct/Obstruct-Prefix.pch";
 				INFOPLIST_FILE = "ObstructTests/ObstructTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
