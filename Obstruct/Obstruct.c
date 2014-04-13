@@ -43,6 +43,18 @@ const char *obstr_block_get_signature(obstr_block_t block) {
 }
 
 
+typedef const char *(*obstr_scanner_f)(const char *, void *);
+
+
+static const char *obstr_while(const char *signature, obstr_scanner_f function, void **parameter) {
+	if (signature == NULL) return NULL;
+	
+	return
+		obstr_while(function(signature, *parameter), function, parameter)
+	?:	signature;
+}
+
+
 static const char *obstr_scan_character(const char *signature, intptr_t c) {
 	if (signature == NULL) return NULL;
 	
