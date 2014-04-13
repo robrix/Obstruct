@@ -7,7 +7,7 @@
 #include <assert.h>
 
 #define obstr_block_apply(block, count, array) \
-	_obstr_block_apply(block, count, __typeof__(*array), array)
+	_obstr_block_apply(block, count, __typeof__(*array), (array))
 
 #define _obstr_block_apply(block, count, type, a) (^{ \
 		int32_t arity = obstr_block_get_arity(block); \
@@ -35,7 +35,7 @@
 #ifdef __OBJC__
 
 #define obstr_block_apply_array(block, array) \
-	_obstr_block_apply((obstr_block_t)block, array.count, id, array)
+	_obstr_block_apply((obstr_block_t)block, (array).count, id, (array))
 
 #endif
 
