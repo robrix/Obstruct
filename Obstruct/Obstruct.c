@@ -43,7 +43,7 @@ const char *obstr_block_get_signature(obstr_block_t block) {
 }
 
 
-static const char *obstr_scan_character(const char *signature, char c) {
+static const char *obstr_scan_character(const char *signature, intptr_t c) {
 	if (signature == NULL) return NULL;
 	
 	return (*signature == c)?
