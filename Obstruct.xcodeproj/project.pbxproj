@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D42ED3C818FA198D005BEC10 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42ED3C718FA198C005BEC10 /* Cocoa.framework */; };
 		D42ED3D218FA198D005BEC10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D42ED3D018FA198D005BEC10 /* InfoPlist.strings */; };
-		D42ED3D618FA198D005BEC10 /* Obstruct.c in Sources */ = {isa = PBXBuildFile; fileRef = D42ED3D518FA198D005BEC10 /* Obstruct.c */; };
 		D42ED3DD18FA198D005BEC10 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42ED3DC18FA198D005BEC10 /* XCTest.framework */; };
 		D42ED3DE18FA198D005BEC10 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42ED3C718FA198C005BEC10 /* Cocoa.framework */; };
 		D42ED3E118FA198D005BEC10 /* Obstruct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42ED3C418FA198C005BEC10 /* Obstruct.framework */; };
@@ -21,6 +20,7 @@
 		D42ED3FB18FA537C005BEC10 /* private.h in Headers */ = {isa = PBXBuildFile; fileRef = D42ED3FA18FA537C005BEC10 /* private.h */; };
 		D42ED40218FA5911005BEC10 /* apply.c in Sources */ = {isa = PBXBuildFile; fileRef = D42ED40018FA5911005BEC10 /* apply.c */; };
 		D42ED40318FA5911005BEC10 /* apply.h in Headers */ = {isa = PBXBuildFile; fileRef = D42ED40118FA5911005BEC10 /* apply.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D42ED40518FA607F005BEC10 /* defines.h in Headers */ = {isa = PBXBuildFile; fileRef = D42ED40418FA607E005BEC10 /* defines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,6 @@
 		D42ED3D118FA198D005BEC10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D42ED3D318FA198D005BEC10 /* Obstruct-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Obstruct-Prefix.pch"; sourceTree = "<group>"; };
 		D42ED3D418FA198D005BEC10 /* Obstruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Obstruct.h; sourceTree = "<group>"; };
-		D42ED3D518FA198D005BEC10 /* Obstruct.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Obstruct.c; sourceTree = "<group>"; };
 		D42ED3DB18FA198D005BEC10 /* ObstructTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObstructTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42ED3DC18FA198D005BEC10 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D42ED3E418FA198D005BEC10 /* ObstructTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObstructTests-Info.plist"; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		D42ED3FA18FA537C005BEC10 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		D42ED40018FA5911005BEC10 /* apply.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = apply.c; sourceTree = "<group>"; };
 		D42ED40118FA5911005BEC10 /* apply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apply.h; sourceTree = "<group>"; };
+		D42ED40418FA607E005BEC10 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				D42ED3D418FA198D005BEC10 /* Obstruct.h */,
-				D42ED3D518FA198D005BEC10 /* Obstruct.c */,
+				D42ED40418FA607E005BEC10 /* defines.h */,
 				D42ED3FA18FA537C005BEC10 /* private.h */,
 				D42ED3F718FA532A005BEC10 /* signature.h */,
 				D42ED3F618FA532A005BEC10 /* signature.c */,
@@ -169,6 +169,7 @@
 			files = (
 				D42ED3F518FA41F4005BEC10 /* Obstruct.h in Headers */,
 				D42ED3F918FA532A005BEC10 /* signature.h in Headers */,
+				D42ED40518FA607F005BEC10 /* defines.h in Headers */,
 				D42ED3FB18FA537C005BEC10 /* private.h in Headers */,
 				D42ED40318FA5911005BEC10 /* apply.h in Headers */,
 			);
@@ -271,7 +272,6 @@
 			files = (
 				D42ED40218FA5911005BEC10 /* apply.c in Sources */,
 				D42ED3F818FA532A005BEC10 /* signature.c in Sources */,
-				D42ED3D618FA198D005BEC10 /* Obstruct.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
