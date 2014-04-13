@@ -73,9 +73,7 @@ static const char *obstr_scan_object_type(const char *signature) {
 	return obstr_scan_until_character(obstr_scan_character(obstr_scan_character(signature, '@'), '"'), '"');
 }
 
-int32_t obstr_block_get_arity(obstr_block_t block) {
-	const char *signature = obstr_block_get_signature(block);
-	
+static int32_t obstr_signature_get_arity(const char *signature) {
 	int32_t arity = 0;
 	
 	obstr_scan_character_in_range(obstr_scan_object_type(signature), '0', '9');
@@ -85,4 +83,10 @@ int32_t obstr_block_get_arity(obstr_block_t block) {
 	// count types
 	
 	return arity;
+}
+
+int32_t obstr_block_get_arity(obstr_block_t block) {
+	const char *signature = obstr_block_get_signature(block);
+	
+	return obstr_signature_get_arity(signature);
 }
