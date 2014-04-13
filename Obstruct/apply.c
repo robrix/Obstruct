@@ -5,7 +5,7 @@
 
 intptr_t obstruct_apply(obstr_block_t block, uintptr_t count, intptr_t a[count]) {
 	int32_t arity = obstr_block_get_arity(block);
-	assert(arity == count && "count must be equal to arity of block");
+	assert(count >= arity && "count must be greater than or equal to arity of block");
 	
 	typedef intptr_t t;
 	switch (arity) {
