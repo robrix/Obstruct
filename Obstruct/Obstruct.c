@@ -124,6 +124,12 @@ static const char *obstr_scan_receiver_type(const char *signature) {
 	return signature;
 }
 
+static const char *obstr_scan_argument_type(const char *signature) {
+	signature = obstr_scan_type(signature);
+	signature = obstr_scan_offset(signature);
+	return signature;
+}
+
 
 static int32_t obstr_signature_get_arity(const char *signature) {
 	int32_t arity = 0;
@@ -131,7 +137,7 @@ static int32_t obstr_signature_get_arity(const char *signature) {
 	signature = obstr_scan_return_type(signature);
 	signature = obstr_scan_receiver_type(signature);
 	
-	while ((signature = obstr_scan_type(signature)) && (signature = obstr_scan_offset(signature) ?: signature)) {
+	while ((signature = obstr_scan_argument_type(signature))) {
 		++arity;
 	}
 	
