@@ -57,6 +57,14 @@ static const char *obstr_while(const char *signature, obstr_scanner_f function, 
 	?:	signature;
 }
 
+static const char *obstr_until(const char *signature, obstr_scanner_f function, void **parameter) {
+	if (signature == NULL) return NULL;
+	
+	return
+		obstr_until(function(signature, parameter) == NULL? signature + 1 : NULL, function, *parameter)
+	?:	signature;
+}
+
 
 static const char *obstr_scan_character(const char *signature, intptr_t c) {
 	if (signature == NULL) return NULL;
@@ -124,9 +132,9 @@ static int32_t obstr_signature_get_arity(const char *signature) {
 	signature = obstr_scan_return_type(signature);
 	signature = obstr_scan_receiver_type(signature);
 	
-	// skip return type
-	// skip ? for block type
-	// count types
+	while ((signature = obstr_scan_type(signature)) && (signature = obstr_scan_offset(signature) ?: signature)) {
+		++arity;
+	}
 	
 	return arity;
 }
@@ -145,4 +153,6 @@ __attribute__((constructor)) static void obstr_selftest(void) {
 	
 	const char *numerals = "1234567890a";
 	assert(obstr_while(numerals, (obstr_scanner_f)obstr_scan_character_in_range, (void **)&(obstr_character_range_t){(obstr_character_range_t)&digits}) == numerals + 10);
+	
+	assert(obstr_signature_get_arity(signature) == 3);
 }
