@@ -49,11 +49,11 @@ typedef struct obstr_character_range_s {
 } *obstr_character_range_t;
 
 
-static const char *obstr_while(const char *signature, obstr_scanner_f function, void **parameter) {
+static const char *obstr_scan_while(const char *signature, obstr_scanner_f function, void **parameter) {
 	if (signature == NULL) return NULL;
 	
 	return
-		obstr_while(function(signature, *parameter), function, parameter)
+		obstr_scan_while(function(signature, *parameter), function, parameter)
 	?:	signature;
 }
 
@@ -110,7 +110,7 @@ static const char *obstr_scan_type(const char *signature) {
 static const struct obstr_character_range_s digits = { .min = '0', .max = '9' };
 
 static const char *obstr_scan_offset(const char *signature) {
-	return obstr_while(
+	return obstr_scan_while(
 		signature,
 		(obstr_scanner_f)obstr_scan_character_in_range,
 		(void **)&(obstr_character_range_t){ (obstr_character_range_t)&digits });
@@ -152,7 +152,7 @@ __attribute__((constructor)) static void obstr_selftest(void) {
 	assert(obstr_scan_object_type(signature) == signature + 11);
 	
 	const char *numerals = "1234567890a";
-	assert(obstr_while(numerals, (obstr_scanner_f)obstr_scan_character_in_range, (void **)&(obstr_character_range_t){(obstr_character_range_t)&digits}) == numerals + 10);
+	assert(obstr_scan_while(numerals, (obstr_scanner_f)obstr_scan_character_in_range, (void **)&(obstr_character_range_t){(obstr_character_range_t)&digits}) == numerals + 10);
 	
 	assert(obstr_signature_get_arity(signature) == 3);
 }
