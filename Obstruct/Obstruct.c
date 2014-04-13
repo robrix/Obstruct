@@ -57,11 +57,11 @@ static const char *obstr_scan_while(const char *signature, obstr_scanner_f funct
 	?:	signature;
 }
 
-static const char *obstr_until(const char *signature, obstr_scanner_f function, void **parameter) {
+static const char *obstr_scan_until(const char *signature, obstr_scanner_f function, void **parameter) {
 	if (signature == NULL) return NULL;
 	
 	return
-		obstr_until(function(signature, *parameter) == NULL? signature + 1 : NULL, function, parameter)
+		obstr_scan_until(function(signature, *parameter) == NULL? signature + 1 : NULL, function, parameter)
 	?:	signature;
 }
 
