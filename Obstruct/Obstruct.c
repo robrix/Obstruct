@@ -60,3 +60,17 @@ static const char *obstr_scan_object_type(const char *signature) {
 		(obstr_scan_until_character(obstr_scan_character((obstr_scan_until_character(obstr_scan_character(signature, '"'), '"')), '<'), '>'))
 	:	NULL;
 }
+
+int32_t obstr_block_get_arity(obstr_block_t block) {
+	const char *signature = obstr_block_get_signature(block);
+	
+	int32_t arity = 0;
+	
+	obstr_scan_object_type(signature);
+	
+	// skip return type
+	// skip ? for block type
+	// count types
+	
+	return arity;
+}
