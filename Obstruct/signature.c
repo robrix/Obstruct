@@ -130,13 +130,3 @@ const char *obstr_scan_signature(const char *signature, obstr_scanner_callback_f
 	
 	return signature;
 }
-
-__attribute__((constructor)) static void obstr_signature_test(void) {
-	const char *signature = "@\"NSString\"32@?0@8@\"<NSCopying>\"16@\"NSString<NSCopying>\"24";
-	
-	assert(obstr_scan_character(signature, '@') == signature + 1);
-	assert(obstr_scan_object_type(signature) == signature + 11);
-	
-	const char *numerals = "1234567890a";
-	assert(obstr_scan_while(numerals, (obstr_scanner_f)obstr_scan_character_in_range, (intptr_t *)&(obstr_character_range_t){(obstr_character_range_t)&digits}) == numerals + 10);
-}
