@@ -90,6 +90,13 @@ static const char *obstr_scan_object_type(const char *signature) {
 
 static const struct obstr_character_range_s digits = { .min = '0', .max = '9' };
 
+static const char *obstr_scan_offset(const char *signature) {
+	return obstr_while(
+		signature,
+		(obstr_scanner_f)obstr_scan_character_in_range,
+		(void **)&(obstr_character_range_t){ (obstr_character_range_t)&digits });
+}
+
 
 static int32_t obstr_signature_get_arity(const char *signature) {
 	int32_t arity = 0;
