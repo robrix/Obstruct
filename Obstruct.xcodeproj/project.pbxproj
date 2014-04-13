@@ -119,8 +119,8 @@
 				D42ED3D418FA198D005BEC10 /* Obstruct.h */,
 				D42ED3D518FA198D005BEC10 /* Obstruct.c */,
 				D42ED3FA18FA537C005BEC10 /* private.h */,
-				D42ED3F618FA532A005BEC10 /* signature.c */,
 				D42ED3F718FA532A005BEC10 /* signature.h */,
+				D42ED3F618FA532A005BEC10 /* signature.c */,
 				D42ED3CE18FA198D005BEC10 /* Supporting Files */,
 			);
 			path = Obstruct;
