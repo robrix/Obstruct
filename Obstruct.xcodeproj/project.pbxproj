@@ -20,7 +20,7 @@
 		D42ED3F918FA532A005BEC10 /* signature.h in Headers */ = {isa = PBXBuildFile; fileRef = D42ED3F718FA532A005BEC10 /* signature.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D42ED3FB18FA537C005BEC10 /* private.h in Headers */ = {isa = PBXBuildFile; fileRef = D42ED3FA18FA537C005BEC10 /* private.h */; };
 		D42ED40218FA5911005BEC10 /* apply.c in Sources */ = {isa = PBXBuildFile; fileRef = D42ED40018FA5911005BEC10 /* apply.c */; };
-		D42ED40318FA5911005BEC10 /* apply.h in Headers */ = {isa = PBXBuildFile; fileRef = D42ED40118FA5911005BEC10 /* apply.h */; };
+		D42ED40318FA5911005BEC10 /* apply.h in Headers */ = {isa = PBXBuildFile; fileRef = D42ED40118FA5911005BEC10 /* apply.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
