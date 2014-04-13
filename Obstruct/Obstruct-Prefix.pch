@@ -1,9 +1,5 @@
-//
-//  Prefix header
-//
-//  The contents of this file are implicitly included at the beginning of every source file.
-//
+//  Copyright (c) 2014 Rob Rix. All rights reserved.
 
 #ifdef __OBJC__
-	#import <Cocoa/Cocoa.h>
+	#import <Foundation/Foundation.h>
 #endif
