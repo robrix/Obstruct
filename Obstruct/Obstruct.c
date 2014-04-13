@@ -54,3 +54,9 @@ static const char *obstr_scan_until_character(const char *signature, char c) {
 		obstr_scan_until_character(signature + 1, c)
 	:	NULL;
 }
+
+static const char *obstr_scan_object_type(const char *signature) {
+	return obstr_scan_character(signature, '@')?
+		(obstr_scan_until_character(obstr_scan_character((obstr_scan_until_character(obstr_scan_character(signature, '"'), '"')), '<'), '>'))
+	:	NULL;
+}
