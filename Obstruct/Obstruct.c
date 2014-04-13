@@ -90,3 +90,10 @@ int32_t obstr_block_get_arity(obstr_block_t block) {
 	
 	return obstr_signature_get_arity(signature);
 }
+
+__attribute__((constructor)) static void obstr_selftest(void) {
+	const char *signature = "@\"NSString\"32@?0@8@\"<NSCopying>\"16@\"NSString<NSCopying>\"24";
+	
+	assert(obstr_scan_character(signature, '@') == signature + 1);
+	assert(obstr_scan_object_type(signature) == signature + 11);
+}
