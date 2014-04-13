@@ -88,6 +88,17 @@ static const char *obstr_scan_object_type(const char *signature) {
 	return obstr_scan_until_character(obstr_scan_character(obstr_scan_character(signature, '@'), '"'), '"');
 }
 
+static const char *obstr_scan_unknown_type(const char *signature) {
+	return obstr_scan_character(signature, '?');
+}
+
+static const char *obstr_scan_type(const char *signature) {
+	return
+		obstr_scan_object_type(signature)
+	?:	obstr_scan_unknown_type(signature);
+}
+
+
 static const struct obstr_character_range_s digits = { .min = '0', .max = '9' };
 
 static const char *obstr_scan_offset(const char *signature) {
