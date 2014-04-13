@@ -2,18 +2,8 @@
 
 #include "Obstruct.h"
 #include "private.h"
+#include "signature.h"
 #include <assert.h>
-
-const char *obstr_block_get_signature(obstr_block_t block) {
-	assert(block != NULL);
-	assert(block->flags & OBSTR_BLOCK_HAS_SIGNATURE);
-	assert(block->descriptor != NULL);
-	
-	return (block->flags & OBSTR_BLOCK_HAS_COPY_DISPOSE)?
-		block->descriptor->signature_for_copy_dispose
-	:	block->descriptor->signature;
-}
-
 
 typedef const char *(*obstr_scanner_f)(const char *, void *);
 typedef struct obstr_character_range_s {

@@ -16,6 +16,8 @@
 		D42ED3E718FA198D005BEC10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D42ED3E518FA198D005BEC10 /* InfoPlist.strings */; };
 		D42ED3E918FA198D005BEC10 /* ObstructTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D42ED3E818FA198D005BEC10 /* ObstructTests.m */; };
 		D42ED3F518FA41F4005BEC10 /* Obstruct.h in Headers */ = {isa = PBXBuildFile; fileRef = D42ED3D418FA198D005BEC10 /* Obstruct.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D42ED3F818FA532A005BEC10 /* signature.c in Sources */ = {isa = PBXBuildFile; fileRef = D42ED3F618FA532A005BEC10 /* signature.c */; };
+		D42ED3F918FA532A005BEC10 /* signature.h in Headers */ = {isa = PBXBuildFile; fileRef = D42ED3F718FA532A005BEC10 /* signature.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D42ED3FB18FA537C005BEC10 /* private.h in Headers */ = {isa = PBXBuildFile; fileRef = D42ED3FA18FA537C005BEC10 /* private.h */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		D42ED3E418FA198D005BEC10 /* ObstructTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObstructTests-Info.plist"; sourceTree = "<group>"; };
 		D42ED3E618FA198D005BEC10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D42ED3E818FA198D005BEC10 /* ObstructTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObstructTests.m; sourceTree = "<group>"; };
+		D42ED3F618FA532A005BEC10 /* signature.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = signature.c; sourceTree = "<group>"; };
+		D42ED3F718FA532A005BEC10 /* signature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = signature.h; sourceTree = "<group>"; };
 		D42ED3FA18FA537C005BEC10 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,8 @@
 				D42ED3D418FA198D005BEC10 /* Obstruct.h */,
 				D42ED3D518FA198D005BEC10 /* Obstruct.c */,
 				D42ED3FA18FA537C005BEC10 /* private.h */,
+				D42ED3F618FA532A005BEC10 /* signature.c */,
+				D42ED3F718FA532A005BEC10 /* signature.h */,
 				D42ED3CE18FA198D005BEC10 /* Supporting Files */,
 			);
 			path = Obstruct;
@@ -156,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D42ED3F518FA41F4005BEC10 /* Obstruct.h in Headers */,
+				D42ED3F918FA532A005BEC10 /* signature.h in Headers */,
 				D42ED3FB18FA537C005BEC10 /* private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42ED3F818FA532A005BEC10 /* signature.c in Sources */,
 				D42ED3D618FA198D005BEC10 /* Obstruct.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
