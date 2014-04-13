@@ -70,9 +70,7 @@ static const char *obstr_scan_until_character(const char *signature, char c) {
 static const char *obstr_scan_object_type(const char *signature) {
 	if (signature == NULL) return NULL;
 	
-	return obstr_scan_character(signature, '@')?
-		obstr_scan_until_character(obstr_scan_character(signature, '"'), '"')
-	:	NULL;
+	return obstr_scan_until_character(obstr_scan_character(obstr_scan_character(signature, '@'), '"'), '"');
 }
 
 int32_t obstr_block_get_arity(obstr_block_t block) {
