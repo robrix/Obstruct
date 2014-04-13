@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D42ED3C818FA198D005BEC10 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42ED3C718FA198C005BEC10 /* Cocoa.framework */; };
+		D42ED3D218FA198D005BEC10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D42ED3D018FA198D005BEC10 /* InfoPlist.strings */; };
+		D42ED3D618FA198D005BEC10 /* Obstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = D42ED3D518FA198D005BEC10 /* Obstruct.m */; };
+		D42ED3DD18FA198D005BEC10 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42ED3DC18FA198D005BEC10 /* XCTest.framework */; };
+		D42ED3DE18FA198D005BEC10 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42ED3C718FA198C005BEC10 /* Cocoa.framework */; };
+		D42ED3E118FA198D005BEC10 /* Obstruct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42ED3C418FA198C005BEC10 /* Obstruct.framework */; };
+		D42ED3E718FA198D005BEC10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D42ED3E518FA198D005BEC10 /* InfoPlist.strings */; };
+		D42ED3E918FA198D005BEC10 /* ObstructTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D42ED3E818FA198D005BEC10 /* ObstructTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D42ED3DF18FA198D005BEC10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D42ED3BB18FA198C005BEC10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D42ED3C318FA198C005BEC10;
+			remoteInfo = Obstruct;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D42ED3C418FA198C005BEC10 /* Obstruct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Obstruct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42ED3C718FA198C005BEC10 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D42ED3CA18FA198D005BEC10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D42ED3CB18FA198D005BEC10 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D42ED3CC18FA198D005BEC10 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D42ED3CF18FA198D005BEC10 /* Obstruct-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Obstruct-Info.plist"; sourceTree = "<group>"; };
+		D42ED3D118FA198D005BEC10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D42ED3D318FA198D005BEC10 /* Obstruct-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Obstruct-Prefix.pch"; sourceTree = "<group>"; };
+		D42ED3D418FA198D005BEC10 /* Obstruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Obstruct.h; sourceTree = "<group>"; };
+		D42ED3D518FA198D005BEC10 /* Obstruct.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Obstruct.m; sourceTree = "<group>"; };
+		D42ED3DB18FA198D005BEC10 /* ObstructTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObstructTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42ED3DC18FA198D005BEC10 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D42ED3E418FA198D005BEC10 /* ObstructTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObstructTests-Info.plist"; sourceTree = "<group>"; };
+		D42ED3E618FA198D005BEC10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D42ED3E818FA198D005BEC10 /* ObstructTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObstructTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D42ED3C018FA198C005BEC10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42ED3C818FA198D005BEC10 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42ED3D818FA198D005BEC10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42ED3DE18FA198D005BEC10 /* Cocoa.framework in Frameworks */,
+				D42ED3E118FA198D005BEC10 /* Obstruct.framework in Frameworks */,
+				D42ED3DD18FA198D005BEC10 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D42ED3BA18FA198C005BEC10 = {
+			isa = PBXGroup;
+			children = (
+				D42ED3CD18FA198D005BEC10 /* Obstruct */,
+				D42ED3E218FA198D005BEC10 /* ObstructTests */,
+				D42ED3C618FA198C005BEC10 /* Frameworks */,
+				D42ED3C518FA198C005BEC10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D42ED3C518FA198C005BEC10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED3C418FA198C005BEC10 /* Obstruct.framework */,
+				D42ED3DB18FA198D005BEC10 /* ObstructTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D42ED3C618FA198C005BEC10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED3C718FA198C005BEC10 /* Cocoa.framework */,
+				D42ED3DC18FA198D005BEC10 /* XCTest.framework */,
+				D42ED3C918FA198D005BEC10 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D42ED3C918FA198D005BEC10 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED3CA18FA198D005BEC10 /* Foundation.framework */,
+				D42ED3CB18FA198D005BEC10 /* CoreData.framework */,
+				D42ED3CC18FA198D005BEC10 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D42ED3CD18FA198D005BEC10 /* Obstruct */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED3D418FA198D005BEC10 /* Obstruct.h */,
+				D42ED3D518FA198D005BEC10 /* Obstruct.m */,
+				D42ED3CE18FA198D005BEC10 /* Supporting Files */,
+			);
+			path = Obstruct;
+			sourceTree = "<group>";
+		};
+		D42ED3CE18FA198D005BEC10 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED3CF18FA198D005BEC10 /* Obstruct-Info.plist */,
+				D42ED3D018FA198D005BEC10 /* InfoPlist.strings */,
+				D42ED3D318FA198D005BEC10 /* Obstruct-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D42ED3E218FA198D005BEC10 /* ObstructTests */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED3E818FA198D005BEC10 /* ObstructTests.m */,
+				D42ED3E318FA198D005BEC10 /* Supporting Files */,
+			);
+			path = ObstructTests;
+			sourceTree = "<group>";
+		};
+		D42ED3E318FA198D005BEC10 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED3E418FA198D005BEC10 /* ObstructTests-Info.plist */,
+				D42ED3E518FA198D005BEC10 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D42ED3C118FA198C005BEC10 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D42ED3C318FA198C005BEC10 /* Obstruct */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D42ED3EC18FA198D005BEC10 /* Build configuration list for PBXNativeTarget "Obstruct" */;
+			buildPhases = (
+				D42ED3BF18FA198C005BEC10 /* Sources */,
+				D42ED3C018FA198C005BEC10 /* Frameworks */,
+				D42ED3C118FA198C005BEC10 /* Headers */,
+				D42ED3C218FA198C005BEC10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Obstruct;
+			productName = Obstruct;
+			productReference = D42ED3C418FA198C005BEC10 /* Obstruct.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D42ED3DA18FA198D005BEC10 /* ObstructTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D42ED3EF18FA198D005BEC10 /* Build configuration list for PBXNativeTarget "ObstructTests" */;
+			buildPhases = (
+				D42ED3D718FA198D005BEC10 /* Sources */,
+				D42ED3D818FA198D005BEC10 /* Frameworks */,
+				D42ED3D918FA198D005BEC10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D42ED3E018FA198D005BEC10 /* PBXTargetDependency */,
+			);
+			name = ObstructTests;
+			productName = ObstructTests;
+			productReference = D42ED3DB18FA198D005BEC10 /* ObstructTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D42ED3BB18FA198C005BEC10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Rob Rix";
+				TargetAttributes = {
+					D42ED3DA18FA198D005BEC10 = {
+						TestTargetID = D42ED3C318FA198C005BEC10;
+					};
+				};
+			};
+			buildConfigurationList = D42ED3BE18FA198C005BEC10 /* Build configuration list for PBXProject "Obstruct" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D42ED3BA18FA198C005BEC10;
+			productRefGroup = D42ED3C518FA198C005BEC10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D42ED3C318FA198C005BEC10 /* Obstruct */,
+				D42ED3DA18FA198D005BEC10 /* ObstructTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D42ED3C218FA198C005BEC10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42ED3D218FA198D005BEC10 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42ED3D918FA198D005BEC10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42ED3E718FA198D005BEC10 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D42ED3BF18FA198C005BEC10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42ED3D618FA198D005BEC10 /* Obstruct.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42ED3D718FA198D005BEC10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42ED3E918FA198D005BEC10 /* ObstructTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D42ED3E018FA198D005BEC10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D42ED3C318FA198C005BEC10 /* Obstruct */;
+			targetProxy = D42ED3DF18FA198D005BEC10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D42ED3D018FA198D005BEC10 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D42ED3D118FA198D005BEC10 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D42ED3E518FA198D005BEC10 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D42ED3E618FA198D005BEC10 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D42ED3EA18FA198D005BEC10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D42ED3EB18FA198D005BEC10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D42ED3ED18FA198D005BEC10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Obstruct/Obstruct-Prefix.pch";
+				INFOPLIST_FILE = "Obstruct/Obstruct-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		D42ED3EE18FA198D005BEC10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Obstruct/Obstruct-Prefix.pch";
+				INFOPLIST_FILE = "Obstruct/Obstruct-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		D42ED3F018FA198D005BEC10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Obstruct.framework/Versions/A/Obstruct";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Obstruct/Obstruct-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ObstructTests/ObstructTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D42ED3F118FA198D005BEC10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Obstruct.framework/Versions/A/Obstruct";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Obstruct/Obstruct-Prefix.pch";
+				INFOPLIST_FILE = "ObstructTests/ObstructTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D42ED3BE18FA198C005BEC10 /* Build configuration list for PBXProject "Obstruct" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D42ED3EA18FA198D005BEC10 /* Debug */,
+				D42ED3EB18FA198D005BEC10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D42ED3EC18FA198D005BEC10 /* Build configuration list for PBXNativeTarget "Obstruct" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D42ED3ED18FA198D005BEC10 /* Debug */,
+				D42ED3EE18FA198D005BEC10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D42ED3EF18FA198D005BEC10 /* Build configuration list for PBXNativeTarget "ObstructTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D42ED3F018FA198D005BEC10 /* Debug */,
+				D42ED3F118FA198D005BEC10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D42ED3BB18FA198C005BEC10 /* Project object */;
+}
