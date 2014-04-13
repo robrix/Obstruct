@@ -44,20 +44,26 @@ const char *obstr_block_get_signature(obstr_block_t block) {
 
 
 static const char *obstr_scan_character(const char *signature, char c) {
-	return (signature && *signature == c)?
+	if (signature == NULL) return NULL;
+	
+	return (*signature == c)?
 		signature + 1
 	:	NULL;
 }
 
 static const char *obstr_scan_until_character(const char *signature, char c) {
-	return (signature && !obstr_scan_character(signature, c))?
+	if (signature == NULL) return NULL;
+	
+	return (!obstr_scan_character(signature, c))?
 		obstr_scan_until_character(signature + 1, c)
-	:	NULL;
+	:	signature + 1;
 }
 
 static const char *obstr_scan_object_type(const char *signature) {
+	if (signature == NULL) return NULL;
+	
 	return obstr_scan_character(signature, '@')?
-		(obstr_scan_until_character(obstr_scan_character((obstr_scan_until_character(obstr_scan_character(signature, '"'), '"')), '<'), '>'))
+		obstr_scan_until_character(obstr_scan_character(signature, '"'), '"')
 	:	NULL;
 }
 
