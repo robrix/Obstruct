@@ -1,6 +1,7 @@
 //  Copyright (c) 2014 Rob Rix. All rights reserved.
 
 #include "Obstruct.h"
+#include <assert.h>
 
 enum {
 	OBSTR_BLOCK_HAS_COPY_DISPOSE =  (1 << 25),
@@ -30,3 +31,13 @@ typedef struct obstr_block_s {
 	} *descriptor;
 } *obstr_block_t;
 
+
+const char *obstr_block_get_signature(obstr_block_t block) {
+	assert(block != NULL);
+	assert(block->flags & OBSTR_BLOCK_HAS_SIGNATURE);
+	assert(block->descriptor != NULL);
+	
+	return (block->flags & OBSTR_BLOCK_HAS_COPY_DISPOSE)?
+		block->descriptor->signature_for_copy_dispose
+	:	block->descriptor->signature;
+}
