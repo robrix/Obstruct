@@ -4,8 +4,11 @@
 #include <assert.h>
 
 intptr_t obstruct_apply(obstr_block_t block, uintptr_t count, intptr_t a[count]) {
+	int32_t arity = obstr_block_get_arity(block);
+	assert(arity == count && "count must be equal to arity of block");
+	
 	typedef intptr_t t;
-	switch (obstr_block_get_arity(block)) {
+	switch (arity) {
 		case 0: return ((t(^)(void))block)();
 		case 1: return ((t(^)(t))block)(a[0]);
 		case 2: return ((t(^)(t,t))block)(a[0], a[1]);
