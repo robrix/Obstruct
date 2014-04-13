@@ -51,6 +51,14 @@ static const char *obstr_scan_character(const char *signature, char c) {
 	:	NULL;
 }
 
+static const char *obstr_scan_character_in_range(const char *signature, char min, char max) {
+	if (signature == NULL) return NULL;
+	
+	return ((min <= *signature) && (*signature <= max))?
+		signature + 1
+	:	NULL;
+}
+
 static const char *obstr_scan_until_character(const char *signature, char c) {
 	if (signature == NULL) return NULL;
 	
@@ -72,7 +80,7 @@ int32_t obstr_block_get_arity(obstr_block_t block) {
 	
 	int32_t arity = 0;
 	
-	obstr_scan_object_type(signature);
+	obstr_scan_character_in_range(obstr_scan_object_type(signature), '0', '9');
 	
 	// skip return type
 	// skip ? for block type
