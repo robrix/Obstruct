@@ -108,4 +108,8 @@ __attribute__((constructor)) static void obstr_selftest(void) {
 	
 	assert(obstr_scan_character(signature, '@') == signature + 1);
 	assert(obstr_scan_object_type(signature) == signature + 11);
+	
+	const char *numerals = "1234567890a";
+	intptr_t digit = '1';
+	assert(obstr_while(numerals, obstr_scan_character, &digit) == numerals + 1);
 }
