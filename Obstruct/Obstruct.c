@@ -61,7 +61,7 @@ static const char *obstr_until(const char *signature, obstr_scanner_f function, 
 	if (signature == NULL) return NULL;
 	
 	return
-		obstr_until(function(signature, parameter) == NULL? signature + 1 : NULL, function, *parameter)
+		obstr_until(function(signature, *parameter) == NULL? signature + 1 : NULL, function, parameter)
 	?:	signature;
 }
 
