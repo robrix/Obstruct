@@ -41,3 +41,16 @@ const char *obstr_block_get_signature(obstr_block_t block) {
 		block->descriptor->signature_for_copy_dispose
 	:	block->descriptor->signature;
 }
+
+
+static const char *obstr_scan_character(const char *signature, char c) {
+	return (signature && *signature == c)?
+		signature + 1
+	:	NULL;
+}
+
+static const char *obstr_scan_until_character(const char *signature, char c) {
+	return (signature && !obstr_scan_character(signature, c))?
+		obstr_scan_until_character(signature + 1, c)
+	:	NULL;
+}
