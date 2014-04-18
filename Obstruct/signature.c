@@ -97,7 +97,9 @@ static const char *obstr_scan_block_type(const char *signature) {
 static const char *obstr_scan_object_type(const char *signature) {
 	signature = obstr_scan_character(signature, '@');
 	intptr_t quote = '"';
-	return obstr_scan_character(obstr_scan_until(obstr_scan_character(signature, quote), (obstr_scanner_f)obstr_scan_character, &quote), quote) ?: signature;
+	return
+		obstr_scan_character(obstr_scan_until(obstr_scan_character(signature, quote), (obstr_scanner_f)obstr_scan_character, &quote), quote)
+	?:	signature;
 }
 
 static const char *obstr_scan_unknown_type(const char *signature) {
