@@ -110,11 +110,16 @@ static const char *obstr_scan_unknown_type(const char *signature) {
 	return obstr_scan_character(signature, '?');
 }
 
+
 static const char *obstr_scan_type(const char *signature) {
-	return
-		obstr_scan_object_type(signature)
+	if (signature == NULL) return NULL;
+	
+	signature =
+		obstr_scan_block_type(signature)
+	?:	obstr_scan_object_type(signature)
 	?:	obstr_scan_void_type(signature)
 	?:	obstr_scan_unknown_type(signature);
+	return obstr_scan_optional(signature, obstr_scan_offset);
 }
 
 static const char *obstr_scan_type_list(const char *signature) {
