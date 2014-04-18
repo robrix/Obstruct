@@ -65,6 +65,10 @@ static const char *obstr_scan_character_in_range(const char *signature, obstr_ch
 
 #pragma mark Types
 
+static const char *obstr_scan_implicit_block_parameter(const char *signature) {
+	return obstr_scan_character(obstr_scan_character(signature, '@'), '?');
+}
+
 static const char *obstr_scan_object_type(const char *signature) {
 	signature = obstr_scan_character(signature, '@');
 	intptr_t quote = '"';
@@ -124,7 +128,8 @@ static const char *obstr_callout(const char *signature, obstr_scanner_callback_f
 
 const char *obstr_scan_signature(const char *signature, obstr_scanner_callback_f callback, intptr_t *context) {
 	signature = obstr_callout(obstr_scan_return_type(signature), callback, context);
-	signature = obstr_callout(obstr_scan_receiver_type(signature), callback, context);
+	signature = obstr_callout(obstr_scan_implicit_block_parameter(signature), callback, context);
+	signature = obstr_scan_offset(signature);
 	
 	while ((signature = obstr_callout(obstr_scan_argument_type(signature), callback, context))) {}
 	
