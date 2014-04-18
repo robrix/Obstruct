@@ -78,6 +78,22 @@ static const char *obstr_scan_implicit_block_parameter(const char *signature) {
 	return obstr_scan_optional(obstr_scan_character(obstr_scan_character(signature, '@'), '?'), obstr_scan_offset);
 }
 
+
+static const char *obstr_scan_type(const char *signature);
+static const char *obstr_scan_type_list(const char *signature);
+
+static const char *obstr_scan_block_type(const char *signature) {
+	if (signature == NULL) return NULL;
+	
+	signature = obstr_scan_implicit_block_parameter(signature);
+	signature = obstr_scan_character(signature, '<');
+	signature = obstr_scan_type(signature);
+	signature = obstr_scan_implicit_block_parameter(signature);
+	signature = obstr_scan_type_list(signature);
+	signature = obstr_scan_character(signature, '>');
+	return signature;
+}
+
 static const char *obstr_scan_object_type(const char *signature) {
 	signature = obstr_scan_character(signature, '@');
 	intptr_t quote = '"';
