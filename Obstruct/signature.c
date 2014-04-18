@@ -18,6 +18,7 @@ const char *obstr_block_get_signature(obstr_block_t block) {
 #pragma mark Scanning
 
 typedef const char *(*obstr_scanner_f)(const char *, intptr_t);
+typedef const char *(*obstr_nullary_scanner_f)(const char *);
 typedef struct obstr_character_range_s {
 	char min, max;
 } *obstr_character_range_t;
@@ -39,6 +40,12 @@ static const char *obstr_scan_until(const char *signature, obstr_scanner_f funct
 	return
 		obstr_scan_until(function(signature, *parameter) == NULL? signature + 1 : NULL, function, parameter)
 	?:	signature;
+}
+
+static const char *obstr_scan_optional(const char *signature, obstr_nullary_scanner_f function) {
+	if (signature == NULL) return NULL;
+	
+	return function(signature) ?: signature;
 }
 
 
