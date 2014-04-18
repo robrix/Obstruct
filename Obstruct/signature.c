@@ -143,28 +143,6 @@ static const char *obstr_scan_offset(const char *signature) {
 }
 
 
-#pragma mark High-level types
-
-static const char *obstr_scan_return_type(const char *signature) {
-	signature = obstr_scan_object_type(signature);
-	signature = obstr_scan_offset(signature);
-	return signature;
-}
-
-static const char *obstr_scan_receiver_type(const char *signature) {
-	signature = obstr_scan_object_type(signature);
-	signature = obstr_scan_unknown_type(signature);
-	signature = obstr_scan_offset(signature);
-	return signature;
-}
-
-static const char *obstr_scan_argument_type(const char *signature) {
-	signature = obstr_scan_type(signature);
-	signature = obstr_scan_offset(signature);
-	return signature;
-}
-
-
 #pragma mark Signature scanning
 
 static const char *obstr_callout(const char *signature, obstr_scanner_callback_f callback, intptr_t *context) {
@@ -174,11 +152,10 @@ static const char *obstr_callout(const char *signature, obstr_scanner_callback_f
 }
 
 const char *obstr_scan_signature(const char *signature, obstr_scanner_callback_f callback, intptr_t *context) {
-	signature = obstr_callout(obstr_scan_return_type(signature), callback, context);
+	signature = obstr_callout(obstr_scan_type(signature), callback, context);
 	signature = obstr_callout(obstr_scan_implicit_block_parameter(signature), callback, context);
-	signature = obstr_scan_offset(signature);
 	
-	while ((signature = obstr_callout(obstr_scan_argument_type(signature), callback, context))) {}
+	while ((signature = obstr_callout(obstr_scan_type(signature), callback, context))) {}
 	
 	return signature;
 }
