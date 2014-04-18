@@ -140,7 +140,7 @@ static const char *obstr_scan_argument_type(const char *signature) {
 #pragma mark Signature scanning
 
 static const char *obstr_callout(const char *signature, obstr_scanner_callback_f callback, intptr_t *context) {
-	if (signature != NULL) callback(signature, *context);
+	if (signature != NULL && callback != NULL) callback(signature, *context);
 	
 	return signature;
 }
