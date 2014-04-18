@@ -85,6 +85,16 @@ static const char *obstr_scan_type(const char *signature) {
 	?:	obstr_scan_unknown_type(signature);
 }
 
+static const char *obstr_scan_type_list(const char *signature) {
+	if (signature == NULL) return NULL;
+	
+	const char *next = NULL;
+	while ((next = obstr_scan_type(signature))) {
+		signature = next;
+	}
+	return signature;
+}
+
 
 static const struct obstr_character_range_s digits = { .min = '0', .max = '9' };
 
