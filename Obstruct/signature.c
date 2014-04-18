@@ -72,8 +72,10 @@ static const char *obstr_scan_character_in_range(const char *signature, obstr_ch
 
 #pragma mark Types
 
+static const char *obstr_scan_offset(const char *signature);
+
 static const char *obstr_scan_implicit_block_parameter(const char *signature) {
-	return obstr_scan_character(obstr_scan_character(signature, '@'), '?');
+	return obstr_scan_optional(obstr_scan_character(obstr_scan_character(signature, '@'), '?'), obstr_scan_offset);
 }
 
 static const char *obstr_scan_object_type(const char *signature) {
