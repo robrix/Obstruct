@@ -14,22 +14,24 @@
 		assert(count >= arity && "count must be greater than or equal to arity of block"); \
 		\
 		typedef type t; \
+		t value = {0}; \
 		switch (arity) { \
-			case 0: return ((t(^)())block)(); \
-			case 1: return ((t(^)(t))block)(a[0]); \
-			case 2: return ((t(^)(t,t))block)(a[0], a[1]); \
-			case 3: return ((t(^)(t,t,t))block)(a[0], a[1], a[2]); \
-			case 4: return ((t(^)(t,t,t,t))block)(a[0], a[1], a[2], a[3]); \
-			case 5: return ((t(^)(t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4]); \
-			case 6: return ((t(^)(t,t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4], a[5]); \
-			case 7: return ((t(^)(t,t,t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4], a[5], a[6]); \
-			case 8: return ((t(^)(t,t,t,t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7]); \
-			case 9: return ((t(^)(t,t,t,t,t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8]); \
-			case 10: return ((t(^)(t,t,t,t,t,t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9]); \
-			case 11: return ((t(^)(t,t,t,t,t,t,t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10]); \
+			case 0: value = ((t(^)())block)(); break; \
+			case 1: value = ((t(^)(t))block)(a[0]); break; \
+			case 2: value = ((t(^)(t,t))block)(a[0], a[1]); break; \
+			case 3: value = ((t(^)(t,t,t))block)(a[0], a[1], a[2]); break; \
+			case 4: value = ((t(^)(t,t,t,t))block)(a[0], a[1], a[2], a[3]); break; \
+			case 5: value = ((t(^)(t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4]); break; \
+			case 6: value = ((t(^)(t,t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4], a[5]); break; \
+			case 7: value = ((t(^)(t,t,t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4], a[5], a[6]); break; \
+			case 8: value = ((t(^)(t,t,t,t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7]); break; \
+			case 9: value = ((t(^)(t,t,t,t,t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8]); break; \
+			case 10: value = ((t(^)(t,t,t,t,t,t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9]); break; \
+			case 11: value = ((t(^)(t,t,t,t,t,t,t,t,t,t,t))block)(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10]); break; \
 			\
 			default: assert(0 == "unsupported block arity"); \
 		} \
+		return value; \
 	}())
 
 #ifdef __OBJC__
