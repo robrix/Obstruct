@@ -9,12 +9,11 @@
 #define obstr_block_apply(block, count, array) \
 	_obstr_block_apply(block, count, __typeof__(*array), (array))
 
-#define _obstr_block_apply(block, count, type, a) \
+#define _obstr_block_apply(block, count, t, a) \
 	({ \
 		int32_t arity = obstr_block_get_arity(block); \
 		assert(count >= arity && "count must be greater than or equal to arity of block"); \
 		\
-		typedef type t; \
 		t value = {0}; \
 		switch (arity) { \
 			case 0: value = ((t(^)())block)(); break; \
