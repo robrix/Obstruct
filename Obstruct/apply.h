@@ -13,6 +13,9 @@
 		_value; \
 	})
 
+#define obstr_block_apply_void(block, count, array) \
+	_obstr_block_apply_map(block, count, __typeof__(*array), __typeof__(*array), (array), _obstr_ignore_value, _obstr_subscript_map)
+
 #define _obstr_subscript_map(a, i) \
 	a[i]
 
@@ -55,6 +58,9 @@
 		_obstr_block_apply_map((obstr_block_t)block, (array).count, id, __typeof__(block()), (array), _obstr_assign_value, map); \
 		_value; \
 	})
+
+#define obstr_block_apply_array_map_void(block, array, map) \
+	_obstr_block_apply_map((obstr_block_t)block, (array).count, id, __typeof__(block()), (array), _obstr_ignore_value, map)
 
 #endif
 
